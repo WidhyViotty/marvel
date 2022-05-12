@@ -29,8 +29,8 @@ const Characters = () => {
         <div className="card">
           {data.results.map((character) => {
             return (
-              <Link to={`/CharacterFile/${character._id}`}>
-                <div key={character._id}>
+              <Link to={`/CharacterFile/${character._id}`} key={character._id}>
+                <div>
                   <h2>{character.name}</h2>
                   <p>{character.description}</p>
                   <img
