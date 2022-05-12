@@ -1,0 +1,51 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+// import { link } from "react-router-dom";
+
+const Characters = () => {
+  const [data, setData] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchCharacters = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:3001/characters/${character._id}`
+        );
+        console.log(response.data);
+        setData(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error.response);
+      }
+    };
+    fetchCharacters();
+  }, []);
+
+  return (
+    <div className="card">
+      {isLoading === true ? (
+        <h1>Loading...</h1>
+      ) : (
+        <div>
+          {data.results.map((character) => {
+            return (
+              <div key={character._id}>
+                <h2>{character.name}</h2>
+                <p>{character.description}</p>
+                <img
+                  src={`${character.thumbnail.path}/standard_large.${character.thumbnail.extension}`}
+                  alt=""
+                />
+                <p>{character.comics}</p>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Characters;
