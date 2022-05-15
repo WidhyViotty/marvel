@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 // import { Link } from "react-router-dom";
-// import { link } from "react-router-dom";
 
 const Comics = () => {
   const [data, setData] = useState();
@@ -10,7 +9,9 @@ const Comics = () => {
   useEffect(() => {
     const fetchComics = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/comics");
+        const response = await axios.get(
+          "https://marvel02-backend.herokuapp.com/comics"
+        );
         console.log(response.data);
         setData(response.data);
         setIsLoading(false);

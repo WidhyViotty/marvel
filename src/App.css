@@ -3,6 +3,17 @@
   display: flex;
 }
 
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchbar{
+  width: 500px;
+}
+
 .char{
   border: solid red;
   width: 1200px;
@@ -13,7 +24,7 @@
   flex-direction: row;
 }
 
-.card{
+/* .card{
   display: flex;
   justify-content: center;
   width: 200px;
@@ -21,6 +32,6 @@
   border: solid aqua;
   flex-wrap: wrap;
   ;
-}
+} */
 
 
