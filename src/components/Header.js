@@ -7,7 +7,7 @@ const Header = () => {
       <Link to="/">
         <div className="logo">
           <img
-            src="https://www.presse-citron.net/app/uploads/2019/11/14-nouveaux-films-marvel-dates.jpg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/langfr-560px-Marvel_Logo.svg.png"
             alt="logo"
             style={{ height: "50px", width: "150px" }}
           />
@@ -15,14 +15,18 @@ const Header = () => {
       </Link>
       <input
         className="searchbar"
-        placeholder="Rechercher personnages ou comics"
+        placeholder="Rechercher un personnages ou un comics"
+        style={{
+          borderColor: "#ED171E",
+          borderRadius: 5,
+        }}
       ></input>
-      <div className="button">
+      <div className="buttons">
         <Link to="/comics">
-          <button className="book">Comics</button>
+          <button className="button">Comics</button>
         </Link>
         <Link to="/characters">
-          <button className="perso">Personnages</button>
+          <button className="button">Personnages</button>
         </Link>
       </div>
     </header>

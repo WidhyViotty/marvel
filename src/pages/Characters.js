@@ -35,7 +35,6 @@ const Characters = () => {
               <Link to={`/comics/${character._id}`} key={character._id}>
                 <div>
                   <h2>{character.name}</h2>
-                  <p>{character.description}</p>
                   <img
                     src={`${character.thumbnail.path}/standard_large.${character.thumbnail.extension}`}
                     alt=""

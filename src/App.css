@@ -17,21 +17,28 @@ header{
 .char{
   border: solid red;
   width: 1200px;
-  height: 2000px;;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   margin: 120px;
-  flex-direction: row;
 }
 
-/* .card{
+.card{
   display: flex;
   justify-content: center;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 300px;
   border: solid aqua;
   flex-wrap: wrap;
-  ;
-} */
+}
 
+.button{
+  background-color:#ED171E;
+  color: white;
+  font-size: 15px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
 
