@@ -26,7 +26,7 @@ const Characters = () => {
   }, [characterId]);
 
   return (
-    <div className="card">
+    <div className="container">
       {isLoading === true ? (
         <h1>Loading...</h1>
       ) : (
@@ -37,11 +37,11 @@ const Characters = () => {
             src={`${data.thumbnail.path}/standard_large.${data.thumbnail.extension}`}
             alt=""
           />
-          <div>
+          <div className="card">
             {data.comics.map((item, index) => {
               return (
                 <div key={index}>
-                  <span>{item.title}</span>
+                  <h2>{item.title}</h2>
                   <img
                     src={item.thumbnail.path + "." + item.thumbnail.extension}
                     alt=""

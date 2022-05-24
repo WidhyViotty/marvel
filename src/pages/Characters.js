@@ -24,7 +24,7 @@ const Characters = () => {
   }, []);
 
   return (
-    <div className="char">
+    <div className="container">
       {isLoading === true ? (
         <h1>Loading...</h1>
       ) : (

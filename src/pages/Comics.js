@@ -32,7 +32,6 @@ const Comics = () => {
             return (
               <div key={comics._id}>
                 <h2>{comics.title}</h2>
-                <p>{comics.description}</p>
                 <img
                   src={`${comics.thumbnail.path}/standard_large.${comics.thumbnail.extension}`}
                   alt=""
