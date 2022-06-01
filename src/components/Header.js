@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   //   const navigate = useNavigate();
-  const handleSearchTerm = (e) => {
-    console.log(e.target.value);
-    // let value = e.target.value;
-    // setSearchTerm(value);
-  };
+  // const handleSearchTerm = (e) => {
+  //   console.log(e.target.value);
+  //   // let value = e.target.value;
+  //   // setSearchTerm(value);
+  // };
   return (
     <header>
       <Link to="/">
@@ -18,7 +18,7 @@ const Header = () => {
           />
         </div>
       </Link>
-      <input
+      {/* <input
         type="text"
         className="searchbar"
         placeholder="Find your Heroes"
@@ -27,7 +27,7 @@ const Header = () => {
           borderColor: "#ED171E",
           borderRadius: 5,
         }}
-      ></input>
+      ></input> */}
       <div className="buttons">
         <Link to="/comics">
           <button className="button">Comics</button>
