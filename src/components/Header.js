@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   //   const navigate = useNavigate();
+  const handleSearchTerm = (e) => {
+    console.log(e.target.value);
+    // let value = e.target.value;
+    // setSearchTerm(value);
+  };
   return (
     <header>
       <Link to="/">
@@ -14,8 +19,10 @@ const Header = () => {
         </div>
       </Link>
       <input
+        type="text"
         className="searchbar"
-        placeholder="Rechercher un personnages ou un comics"
+        placeholder="Find your Heroes"
+        onChange={handleSearchTerm}
         style={{
           borderColor: "#ED171E",
           borderRadius: 5,

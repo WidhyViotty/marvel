@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   display: flex;
+  align-items: center;
 }
 
 header{
@@ -12,6 +13,7 @@ header{
 
 .searchbar{
   width: 500px;
+  align-items: center;
 }
 
 .container{
