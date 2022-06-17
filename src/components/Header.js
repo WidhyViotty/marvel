@@ -33,8 +33,15 @@ const Header = () => {
           <button className="button">Comics</button>
         </Link>
         <Link to="/characters">
-          <button className="button">Personnages</button>
+          <button className="button">Heroes/Villains</button>
         </Link>
+        <Link to="/signup">
+          <button className="button">Sign Up</button>
+        </Link>
+        <Link to="/login">
+          <button className="button">Log In</button>
+        </Link>
+        <button className="button">Log Out</button>
       </div>
     </header>
   );

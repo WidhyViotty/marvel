@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // import ReactPaginate from "react-paginate";
 
 const Characters = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [skip, setSkip] = useState(0);
@@ -16,7 +16,7 @@ const Characters = () => {
     const fetchCharacters = async () => {
       try {
         const response = await axios.get(
-          `https://marvel02-backend.herokuapp.com/characters?limit=${limit}&skip=${skip}`
+          `https://marvel02-backend.herokuapp.com/characters?limit=${limit}&skip=${skip}&name=${searchTerm}`
         );
         console.log(response.data, "skipskipskip");
         setData(response.data);
@@ -26,7 +26,7 @@ const Characters = () => {
       }
     };
     fetchCharacters();
-  }, [skip, limit]);
+  }, [skip, limit, searchTerm]);
 
   const handleSearchTerm = (e) => {
     let value = e.target.value;
@@ -49,27 +49,26 @@ const Characters = () => {
         {isLoading === true ? (
           <h1>Loading...</h1>
         ) : (
+          // .filter((val) => {
+          //   return val.name
+          //     .toLowerCase()
+          //     .includes(searchTerm.toLowerCase());
+          // })
           <div className="card">
-            {data.results
-              .filter((val) => {
-                return val.name
-                  .toLowerCase()
-                  .includes(searchTerm.toLowerCase());
-              })
-              .map((character) => {
-                console.log(character, "lalalalala");
-                return (
-                  <Link to={`/comics/${character._id}`} key={character._id}>
-                    <div>
-                      <h2>{character.name}</h2>
-                      <img
-                        src={`${character.thumbnail.path}/standard_large.${character.thumbnail.extension}`}
-                        alt=""
-                      />
-                    </div>
-                  </Link>
-                );
-              })}
+            {data.results.map((character) => {
+              console.log(character, "lalalalala");
+              return (
+                <Link to={`/comics/${character._id}`} key={character._id}>
+                  <div>
+                    <h2>{character.name}</h2>
+                    <img
+                      src={`${character.thumbnail.path}/standard_large.${character.thumbnail.extension}`}
+                      alt=""
+                    />
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         )}
       </div>

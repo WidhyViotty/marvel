@@ -50,4 +50,11 @@ header{
   cursor: pointer;
 }
 
+.signup-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+}
 
