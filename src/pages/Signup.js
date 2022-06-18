@@ -1,23 +1,18 @@
 import { useState } from "react";
-import axios from "axios";
 
 const Signup = ({ handleToken }) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit=(event)=>{
-      event.preventDefault();
-      try {
-
-      }catch{
-          
-      }
-
-  }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    try {
+    } catch {}
+  };
 
   return (
-    <form className="signup-container" onSubmit={}>
+    <form className="signup-container" onSubmit={handleSubmit}>
       <h1>Sign Up</h1>
       <input
         type="text"

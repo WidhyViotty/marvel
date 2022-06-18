@@ -34,17 +34,19 @@ const Characters = () => {
   };
 
   return (
-    <div className="app">
-      <input
-        type="text"
-        className="searchbar"
-        placeholder="Find your Heroes"
-        onChange={handleSearchTerm}
-        style={{
-          borderColor: "#ED171E",
-          borderRadius: 5,
-        }}
-      ></input>
+    <div className="characters">
+      <div className="search">
+        <input
+          type="text"
+          className="searchbar"
+          placeholder="Find your Heroes"
+          onChange={handleSearchTerm}
+          // style={{
+          //   borderColor: "#ED171E",
+          //   borderRadius: 5,
+          // }}
+        ></input>
+      </div>
       <div className="container">
         {isLoading === true ? (
           <h1>Loading...</h1>
@@ -54,17 +56,18 @@ const Characters = () => {
           //     .toLowerCase()
           //     .includes(searchTerm.toLowerCase());
           // })
-          <div className="card">
+          <div className="grid">
             {data.results.map((character) => {
               console.log(character, "lalalalala");
               return (
                 <Link to={`/comics/${character._id}`} key={character._id}>
-                  <div>
-                    <h2>{character.name}</h2>
+                  <div class="card">
                     <img
+                      class="imgChar"
                       src={`${character.thumbnail.path}/standard_large.${character.thumbnail.extension}`}
                       alt=""
                     />
+                    <h2 class="name">{character.name}</h2>
                   </div>
                 </Link>
               );
@@ -73,8 +76,12 @@ const Characters = () => {
         )}
       </div>
       <div className="pagination">
-        <button onClick={() => setSkip(skip - limit)}>Previous</button>
-        <button onClick={() => setSkip(skip + limit)}>Next</button>
+        <button className="previous" onClick={() => setSkip(skip - limit)}>
+          Previous
+        </button>
+        <button className="next" onClick={() => setSkip(skip + limit)}>
+          Next
+        </button>
         {/* <ReactPaginate
           previousLabel={"Previous"}
           nextLabel={"Next"}

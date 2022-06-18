@@ -12,9 +12,9 @@ const Header = () => {
       <Link to="/">
         <div className="logo">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/langfr-560px-Marvel_Logo.svg.png"
-            alt="logo"
-            style={{ height: "50px", width: "150px" }}
+            src="https://images.vectorhq.com/images/previews/cd8/marvel-logo-psd-444569.png"
+            alt="test"
+            style={{ height: "40px", width: "120px" }}
           />
         </div>
       </Link>
@@ -28,20 +28,15 @@ const Header = () => {
           borderRadius: 5,
         }}
       ></input> */}
-      <div className="buttons">
-        <Link to="/comics">
-          <button className="button">Comics</button>
-        </Link>
-        <Link to="/characters">
-          <button className="button">Heroes/Villains</button>
-        </Link>
-        <Link to="/signup">
-          <button className="button">Sign Up</button>
-        </Link>
-        <Link to="/login">
-          <button className="button">Log In</button>
-        </Link>
-        <button className="button">Log Out</button>
+      <div class="menuHome">
+        <ul>
+          <li>
+            <a href="/characters">Heroes / Villains</a>
+          </li>
+          <li>
+            <a href="/comics">Comics</a>
+          </li>
+        </ul>
       </div>
     </header>
   );

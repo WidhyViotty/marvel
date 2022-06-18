@@ -11,36 +11,71 @@ header{
   justify-content: space-between;
 }
 
+.logo{
+  margin-left: 25px;
+}
+
+.menuHome a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+}
+.menuHome li{
+  display: inline-block;
+}
+.menuHome li:last-child {
+  margin-left:30px;
+  margin-right: 30px;
+}
+
+.search{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 70px;
+  height: 50px;
+}
+
 .searchbar{
   width: 500px;
   align-items: center;
+  border-radius: 15px;
+  padding: 15px;
+  align-content: center;
+
 }
 
 .container{
-  border: solid red;
   width: 1200px;
   /* height: 100%; */
   display: flex;
   flex-wrap: wrap;
-  margin: 120px;
+  margin: 50px 120px;
 }
 
-.card{
+.grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    text-align: center;
     }
-  /* display: flex;
-  justify-content: center;
-  width: 250px;
-  height: 300px;
-  border: solid aqua;
-  flex-wrap: wrap;
-} */
 
-.button{
+.card{
+  background-color: white;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.imgChar{
+  border-radius: 15px;
+  width: 100%;
+}
+
+    .button{
   background-color:#ED171E;
   color: white;
   font-size: 15px;
@@ -57,4 +92,46 @@ header{
   align-items: center;
   width: 90vw;
 }
+
+.name {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.previous {
+  /* padding: 20px 60px; */
+  width: 200px;
+  height: 60px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  align-items: center;
+  align-content: center;
+}
+
+.next {
+  /* padding: 20px 60px; */
+  width: 200px;
+  height: 60px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  align-items: center;
+  align-content: center;
+  }
 
