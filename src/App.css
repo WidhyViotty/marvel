@@ -52,6 +52,7 @@ header{
   /* height: 100%; */
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin: 50px 120px;
 }
 
@@ -64,18 +65,89 @@ header{
     text-align: center;
     }
 
+.gridComics{
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: repeat(5, 2fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-align: center;
+}
+
 .card{
-  background-color: white;
+  background-color: black;
   border-radius: 15px;
   margin: 5px;
+  height: 350px;
+}
+
+.cardChar{
+  background-color: black;
+  border-radius: 15px;
+  margin: 5px;
+  width: 210px;
+  height: 280px;
+  /* padding: 5px; */
+}
+
+.cardComicsChar{
+  background-color: black;
+  border-radius: 15px;
+  margin: 5px;
+  width: 300px;
+  height: 415px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comCharImg{
+  border-radius: 15px;
+  width: 60%;
+}
+
+.comCharName{
+  padding: 2px;
+  color: white;
+}
+
+.description{
+  color:white
+}
+
+.title{
+  color: white;
+    text-decoration: none;
+    display: inline-block;
+    width: 250px;
+    /* white-space: nowrap; */
+    overflow:auto;
+    /* text-overflow: ellipsis; */
+    font-size: 18px;
+}
+
+.cardComics{
+  background-color: black;
+  border-radius: 15px;
+  margin: 5px;
+  width: 290px;
+  height: 450px;
 }
 
 .imgChar{
   border-radius: 15px;
   width: 100%;
+  height: 85%;
 }
 
-    .button{
+.imgCom{
+  border-radius: 15px;
+  width: 100%;
+  height: 85%;
+}
+
+/* .button{
   background-color:#ED171E;
   color: white;
   font-size: 15px;
@@ -83,7 +155,7 @@ header{
   border-radius: 5px;
   margin: 10px 0px;
   cursor: pointer;
-}
+} */
 
 .signup-container{
   display: flex;
@@ -94,14 +166,15 @@ header{
 }
 
 .name {
-    color: black;
+    color: white;
     text-decoration: none;
     display: inline-block;
     width: 180px;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 20px;
+    overflow: auto;
+    /* text-overflow: ellipsis; */
+    font-size: 18px;
+    /* display: none; */
 }
 
 .pagination {

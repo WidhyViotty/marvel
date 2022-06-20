@@ -30,22 +30,26 @@ const Characters = () => {
       {isLoading === true ? (
         <h1>Loading...</h1>
       ) : (
-        <div>
-          <h2>{data.name}</h2>
-          <p>{data.description}</p>
-          <img
-            src={`${data.thumbnail.path}/standard_large.${data.thumbnail.extension}`}
-            alt=""
-          />
-          <div className="card">
+        <div className="">
+          <div className="cardComicsChar">
+            <img
+              className="comCharImg"
+              src={`${data.thumbnail.path}/standard_large.${data.thumbnail.extension}`}
+              alt=""
+            />
+            <h2 className="comCharName">{data.name}</h2>
+            <p className="description">{data.description}</p>
+          </div>
+          <div className="gridComics">
             {data.comics.map((item, index) => {
               return (
-                <div key={index}>
-                  <h2>{item.title}</h2>
+                <div className="cardComics" key={index}>
                   <img
+                    className="imgCom"
                     src={item.thumbnail.path + "." + item.thumbnail.extension}
                     alt=""
                   ></img>
+                  <h2 className="title">{item.title}</h2>
                 </div>
               );
             })}
